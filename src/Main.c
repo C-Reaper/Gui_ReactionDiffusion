@@ -36,8 +36,13 @@ void Update(AlxWindow* w){
 		);
 	}
 	//if(Stroke(ALX_KEY_SPACE).DOWN){
-		ReactionDiffusion_Iter(&rd,40.0 * w->ElapsedTime);
+		ReactionDiffusion_Iter(&rd,1.0); // 100.0 * w->ElapsedTime
 	//}
+	if(Stroke(ALX_KEY_ENTER).DOWN){
+		for(int i = 0;i<1000;i++){
+			ReactionDiffusion_Iter(&rd,1.0);
+		}
+	}
 	if(Stroke(ALX_KEY_R).PRESSED){
 		ReactionDiffusion_Reset(&rd);
 	}
