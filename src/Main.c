@@ -14,7 +14,7 @@ void Setup(AlxWindow* w){
 	);
     AlxFont_Resize(&window.font,50,50);
 
-    rd = ReactionDiffusion_New(500U,500U);
+    rd = ReactionDiffusion_New(250U,250U);
 }
 void Update(AlxWindow* w){
     tv.ZoomSpeed = (float)w->ElapsedTime;
