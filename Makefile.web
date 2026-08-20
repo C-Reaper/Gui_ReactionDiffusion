@@ -2,7 +2,7 @@
 
 CC = emcc
 WARNINGS = -Werror
-CFLAGS = -O0 -msimd128 -mavx2 -std=gnu17 $(WARNINGS)
+CFLAGS = -O3 -msimd128 -mavx2 -std=gnu17 $(WARNINGS)
 INCLUDES = -Isrc -D_WEB -sINITIAL_MEMORY=169082880
 LDFLAGS = -s USE_SDL=0
 SRC_DIR = ./src
